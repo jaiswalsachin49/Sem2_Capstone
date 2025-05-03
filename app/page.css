@@ -1,0 +1,10 @@
+.main{
+  background: linear-gradient(#bcd9f3);
+  width: 100vw;
+  height: 100vw;
+  text-align: center;
+}
+.banner{
+  width: 80%;
+  border-radius: 15px;
+}
