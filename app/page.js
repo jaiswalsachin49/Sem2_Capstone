@@ -80,7 +80,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/home.png" alt="Professional networking" className="banner" />
+          <Image src="/home.png" alt="Professional networking" className="banner" height={400} width={400}/>
         </div>
       </section>
 
@@ -195,10 +195,12 @@ export default function Home() {
               </p>
             </div>
             <div className="testimonial-author">
-              <img
-                src="mypfp.jpeg"
+              <Image
+                src="/mypfp.jpeg"
                 alt="User avatar"
                 className="testimonial-avatar"
+                width={40}
+                height={40}
               />
               <div className="testimonial-info">
                 <h4>Sachin Jaiswal</h4>

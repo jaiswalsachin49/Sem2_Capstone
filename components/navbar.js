@@ -1,10 +1,11 @@
 import Link from "next/link"
 import "../styles/nav.css"
+import Image from "next/image"
 export default function Navbar(){
     return(
         <div className="nav">
             <div className="left">
-                <img src="/logo.png" alt="logo" className="logo"/>
+                <Image src="/logo.png" alt="logo" className="logo" height={170} width={170} />
                 <Link href="/" className="link" >Home</Link>
                 <Link href="/job" className="link">Jobs</Link>
                 <Link href="/connection" className="link">Connections</Link>
