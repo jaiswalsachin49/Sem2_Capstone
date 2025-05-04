@@ -6,10 +6,10 @@ export default function Navbar(){
             <div className="left">
                 <img src="/logo.png" alt="logo" className="logo"/>
                 <Link href="/" className="link" >Home</Link>
-                <Link href="/" className="link">Jobs</Link>
-                <Link href="/" className="link">Connections</Link>
-                <Link href="/" className="link">Blog</Link>
-                <Link href="/" className="link">About</Link>
+                <Link href="/job" className="link">Jobs</Link>
+                <Link href="/connection" className="link">Connections</Link>
+                <Link href="/blog" className="link">Blog</Link>
+                <Link href="/about" className="link">About</Link>
             </div>
             <div className="right">
                 <Link href="/" className="link"><img src="/profile_logo.png" /></Link>

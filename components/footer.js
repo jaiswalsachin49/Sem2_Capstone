@@ -1,5 +1,5 @@
 import "../styles/footer.css"
-
+import Link from "next/link"
 export default function Footer(){
     return(
         <footer className="footer">
@@ -13,10 +13,10 @@ export default function Footer(){
         <div className="footer-section">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/jobs">Jobs</a></li>
-                <li><a href="/connections">Connections</a></li>
-                <li><a href="/about">About Us</a></li>
+                <li><Link href="/" className="link" >Home</Link></li>
+                <li><Link href="/job" className="link" >Jobs</Link></li>
+                <li><Link href="/connection" className="link" >Connections</Link></li>
+                <li><Link href="/about" className="link" >About Us</Link></li>
             </ul>
         </div>
 
