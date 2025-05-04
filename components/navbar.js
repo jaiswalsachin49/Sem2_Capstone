@@ -13,7 +13,7 @@ export default function Navbar(){
                 <Link href="/about" className="link">About</Link>
             </div>
             <div className="right">
-                <Link href="/" className="link"><img src="/profile_logo.png" /></Link>
+                <Link href="/" className="link"><Image src="/profile_logo.png" alt="profile_img" height={50} width={50}/></Link>
             </div>
         </div>
     )

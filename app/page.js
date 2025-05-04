@@ -188,11 +188,11 @@ export default function Home() {
         <div className="testimonial-carousel">
           <div className="testimonial">
             <div className="testimonial-content">
-              <p>
-                "ProConnect helped me land my dream job at a leading tech company.
-                The networking features and job recommendations were exactly what I
-                needed to take my career to the next level."
-              </p>
+            <p>
+              {`"ProConnect helped me land my dream job at a leading tech company.
+              The networking features and job recommendations were exactly what I
+              needed to take my career to the next level."`}
+            </p>
             </div>
             <div className="testimonial-author">
               <Image
