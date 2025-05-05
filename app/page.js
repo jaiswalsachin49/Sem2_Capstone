@@ -74,7 +74,7 @@ export default function Home() {
             <Link href="/signup" className="btn btn-primary">
               Join ProConnect
             </Link>
-            <Link href="/jobs" className="btn btn-secondary">
+            <Link href="/job" className="btn btn-secondary">
               Find Opportunities
             </Link>
           </div>
@@ -159,7 +159,7 @@ export default function Home() {
       <section className="featured-jobs">
         <div className="section-header">
           <h2>Featured Job Opportunities</h2>
-          <Link href="/jobs" className="view-all">
+          <Link href="/job" className="view-all">
             View All Jobs
           </Link>
         </div>
@@ -175,7 +175,7 @@ export default function Home() {
                 <span className="job-location">{job.location}</span>
                 <span className="job-date">{job.postedDate}</span>
               </div>
-              <Link href={`/jobs/${job.id}`} className="btn btn-outline">
+              <Link href={`/job`} className="btn btn-outline">
                 View Details
               </Link>
             </div>
@@ -229,7 +229,7 @@ export default function Home() {
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
-              <Link href={`/blog/${post.id}`} className="read-more">
+              <Link href={`/blog`} className="read-more">
                 Read More
               </Link>
             </div>

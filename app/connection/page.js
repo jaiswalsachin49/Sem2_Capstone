@@ -1,5 +1,8 @@
 export default function Connections(){
     return(
-        <main>Connections Page</main>
+        <main>
+            <h1>Connections Page</h1>
+            <p>Connect with us and explore our network!</p>
+        </main>
     )
 }
