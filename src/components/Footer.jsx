@@ -6,7 +6,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export default function Footer() {
   return (
     <motion.footer
-      className="bg-gray-900 text-gray-300 py-10 mt-20"
+      className="bg-gray-900 text-gray-300 py-10 mt-20 sticky bottom-0 w-full"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex gap-6">
           <Link to="/" className="hover:text-white transition">Home</Link>
           <Link to="/jobs" className="hover:text-white transition">Jobs</Link>
-          <Link to="/community" className="hover:text-white transition">Community</Link>
+          <Link to="/connections" className="hover:text-white transition">Connections</Link>
           <Link to="/about" className="hover:text-white transition">About</Link>
         </div>
 

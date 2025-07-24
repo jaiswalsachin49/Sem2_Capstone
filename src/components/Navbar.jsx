@@ -1,68 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    const navLinkClass = ({ isActive }) =>
+        isActive
+            ? "font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            : "text-gray-700 hover:text-gray-500";
+
     return (
-        <nav>
-        <ul className="flex justify-between items-center px-20 text-black h-20 border-b border-gray-300 fixed top-0 bg-white w-full z-50">
-            <li>
-            <Link to="/">
-                <h1 className="font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-3xl">
-                    Pro Connect
-                </h1>
-            </Link>
-            </li>
-            <li className="flex space-x-5 text-lg text-gray-700">
-            <NavLink
-                to="/"
-                className={({ isActive }) =>
-                isActive ? "font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:text-gray-400" : "hover:text-gray-400"
-                }
-            >
-                Home
-            </NavLink>
-            <NavLink
-                to="/jobs"
-                className={({ isActive }) =>
-                isActive ? "font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:text-gray-400" : "hover:text-gray-400"
-                }
-            >
-                Jobs
-            </NavLink>
-            <NavLink
-                to="/connections"
-                className={({ isActive }) =>
-                isActive ? "font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:text-gray-400" : "hover:text-gray-400"
-                }
-            >
-                Connections
-            </NavLink>
-            <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                isActive ? "font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:text-gray-400" : "hover:text-gray-400"
-                }
-            >
-                Blog
-            </NavLink>
-            <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                isActive ? "font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:text-gray-400" : "hover:text-gray-400"
-                }
-            >
-                About
-            </NavLink>
-            </li>
-            <li>
-            <Link
-                to="/login"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded "
-            >
-                Login
-            </Link>
-            </li>
-        </ul>
+        <nav className="fixed top-0 w-full bg-white border-b border-gray-300 z-50">
+            <div className="flex items-center justify-between h-20 px-4 md:px-20">
+                {/* Logo */}
+                <Link to="/">
+                    <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        Pro Connect
+                    </h1>
+                </Link>
+
+                {/* Desktop Menu */}
+                <ul className="hidden md:flex space-x-6 text-lg items-center">
+                    <NavLink to="/" className={navLinkClass}>Home</NavLink>
+                    <NavLink to="/jobs" className={navLinkClass}>Jobs</NavLink>
+                    <NavLink to="/connections" className={navLinkClass}>Connections</NavLink>
+                    <NavLink to="/blog" className={navLinkClass}>Blog</NavLink>
+                    <NavLink to="/about" className={navLinkClass}>About</NavLink>
+                    <Link
+                        to="/login"
+                        className="ml-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded"
+                    >
+                        Login
+                    </Link>
+                </ul>
+
+                {/* Mobile Menu Button */}
+                <div className="md:hidden">
+                    <button onClick={toggleMenu}>
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
+                </div>
+            </div>
+
+            {isOpen && (
+                <div className="md:hidden bg-white px-4 pb-4 pt-2 space-y-2 border-t border-gray-300 shadow-md">
+                <div className="md:hidden bg-white px-4 pb-4 pt-2 space-y-2 border-t border-gray-300 shadow-md flex gap-2">
+                    <NavLink to="/" className={navLinkClass} onClick={toggleMenu}>Home</NavLink>
+                    <NavLink to="/jobs" className={navLinkClass} onClick={toggleMenu}>Jobs</NavLink>
+                    <NavLink to="/connections" className={navLinkClass} onClick={toggleMenu}>Connections</NavLink>
+                    <NavLink to="/blog" className={navLinkClass} onClick={toggleMenu}>Blog</NavLink>
+                    <NavLink to="/about" className={navLinkClass} onClick={toggleMenu}>About</NavLink>
+                </div>
+                    <Link
+                        to="/login"
+                        className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-4 py-2 rounded"
+                        onClick={toggleMenu}
+                    >
+                        Login
+                    </Link>
+                </div>
+            )}
         </nav>
     );
 }
