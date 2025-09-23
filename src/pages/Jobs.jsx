@@ -78,7 +78,7 @@ const fetchJobs = async (query = "frontend developer", page = 1) => {
             placeholder="Search jobs..."
             value={query}
             onChange={(e) => {
-            setPage(1); // reset to page 1 on new search
+            setPage(1); 
             setQuery(e.target.value);
             }}
             className="w-full md:w-1/2 p-3 mb-8 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -99,7 +99,7 @@ const fetchJobs = async (query = "frontend developer", page = 1) => {
             <>
             <AnimatePresence mode="wait">
                 <motion.ul
-                key={`${query}-${page}`} // key triggers reanimation on page/query change
+                key={`${query}-${page}`} 
                 className="space-y-6"
                 variants={containerVariants}
                 initial="hidden"
@@ -130,8 +130,6 @@ const fetchJobs = async (query = "frontend developer", page = 1) => {
                 ))}
                 </motion.ul>
             </AnimatePresence>
-
-            {/* Pagination Controls */}
             <div className="flex justify-center space-x-4 mt-10">
                 <button
                 onClick={() => setPage((p) => Math.max(1, p - 1))}

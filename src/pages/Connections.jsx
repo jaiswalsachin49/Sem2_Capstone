@@ -33,20 +33,13 @@ const mockConnections = [
   },
   {
     id: 5,
-    name: "Abhishek Rana",
-    avatar: "/avatars/abhishek.jpg",
-    position: "Backend Developer",
-    location: "Kurukshetra, India",
-  },
-  {
-    id: 6,
     name: "Ashutosh Singh",
     avatar: "/avatars/ashutosh.jpg",
     position: "Product Manager",
     location: "Prayagraj, India",
   },
   {
-    id: 7,
+    id: 6,
     name: "Vikrant Yadav",
     avatar: "/avatars/vikrant.jpg",
     position: "Software Engineer",
