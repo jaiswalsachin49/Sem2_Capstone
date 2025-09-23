@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
-    const API_URL = 'http://localhost:3000/api/auth';
+    const API_URL = `${import.meta.env.VITE_API_URL}/auth`;
 
     const login = async (email, password) => {
         try {
