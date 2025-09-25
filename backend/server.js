@@ -9,10 +9,7 @@ const app = express();
 connectDB();
 
 // Init Middleware
-app.use(cors({
-    origin: ['http://localhost:5173', 'https://proconnect-git-main-sachin-jaiswals-projects-9b537fcb.vercel.app'],
-    credentials: true
-}));
+app.use(cors());
 app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('API Running'));
